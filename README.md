@@ -9,11 +9,10 @@ When not in active interactive mode, the installation relies on its own generati
 
 
 ## How It Works
-
-
+The diagram above demonstrates how interacting with the Lightwall works. You can control the wall in two ways. The first is by accessing the user-facing website at [lightwall.carnegielibrary.org](). The second is by controlling the Lightwall through its [API](https://en.wikipedia.org/wiki/Application_programming_interface). This method allows you to send formatted URIs called "GET Requests" to the Lightwall computer. These formatted messages are immediately translated and sent to the physical light installation.
 
 ### The API
-Pattern-making on the Lightwall consists of three types of "events"; **sweep**, **explode**, and **dots**. Each event can be triggered and controlled through a simple web [GET request](http://www.w3schools.com/tags/ref_httpmethods.asp). Each type of event has a different set of parameters that determine how that event is executed. All parameters can accept values between 0-100. 
+Pattern-making on the Lightwall consists of three types of "events"; **sweep**, **explode**, and **dots**. Each event can be triggered and controlled through a simple web [GET request](http://www.w3schools.com/tags/ref_httpmethods.asp). Each type of event has a different set of parameters that determine how that event is executed. All parameters can accept values between 0-100.
 
 
 #### **Sweep Parameters**
@@ -47,4 +46,9 @@ Create "popping" animation across the light wall. This command **requires one pa
 - **Example GET Request:** http://lightwall.carnegielibrary.org/dots?size=34&duration=99
 
 
+## Examples
+This repository will soon contain code examples in different languages that will help you get started building your own control program.
+
+
 ## More Information
+All of the code in the project is open source! The animation application was written in [openFrameworks](http://openframeworks.cc). Source code for the animation application as well as directions on how to compile the code can be found [here](https://github.com/jmarsico/CLP_Knoxville_Wall). The request server, which relays information from user's GET requests to the animation application, was written in [node.js](https://nodejs.org/en/). The source code for the request server can be found [here](https://github.com/jmarsico/CLP_Request_Server).
